@@ -68,7 +68,7 @@ if submitted and query_input:
         try:
             # SEND REQUEST TO BACKEND
             payload = {"query": query_input}
-            response = requests.post(API_URL, json=payload, timeout=30)
+            response = requests.post(API_URL, json=payload, timeout=120)
             
             if response.status_code == 200:
                 data = response.json()
@@ -81,12 +81,12 @@ if submitted and query_input:
                     
                     # Display Results
                     for i, item in enumerate(results):
-                        with st.expander(f"{i+1}. {item['name']} ({item['duration']} mins)", expanded=True):
+                        with st.expander(f"{i+1}. {item['assessment_name']} ({item['duration']} mins)", expanded=True):
                             # Layout: Description on left, Meta tags on right
                             c1, c2 = st.columns([3, 1])
                             with c1:
                                 st.markdown(f"**Description:** {item['description']}")
-                                st.markdown(f"[🔗 View on SHL Catalog]({item['url']})")
+                                st.markdown(f"[🔗 View on SHL Catalog]({item['assessment_url']})")
                             with c2:
                                 st.caption("Test Types:")
                                 st.info(", ".join(item['test_type']))
