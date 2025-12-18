@@ -2,10 +2,6 @@
 
 **A Smart Talent Acquisition Tool for HR Professionals**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://talentlens-cimdbqsshfd37ja45o6mke.streamlit.app/)
-[![Backend Status](https://img.shields.io/badge/Render-Deployed-success)](https://shl-engine-backend.onrender.com/health)
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-
 ## 📖 Project Overview
 
 This project is an **AI-powered Recommendation Engine** designed to help HR professionals and Recruiters instantly find the best SHL assessments for a specific job role. By analyzing Job Descriptions (JDs) or natural language queries, the engine intelligently maps requirements to SHL's extensive assessment catalog.
